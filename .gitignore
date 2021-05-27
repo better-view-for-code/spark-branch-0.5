@@ -1,2 +1,7 @@
 *.class
 *.log
+libs/
+target/
+project/target/*
+.idea/
+.idea/*
