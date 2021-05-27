@@ -21,13 +21,6 @@ object LibsPlugin extends AutoPlugin {
           .map(f => (f, f.getName))
           .filter(_._2.endsWith(".jar"))
 
-      jars.map(
-        ele => log.info(ele._2)
-      )
-
-      val fullName = name.value + "_" + scalaVersion.value
-        .substring(0, scalaVersion.value.lastIndexOf("."))
-
       IO.zip(
         jars,
         (baseDirectory in Compile).value
